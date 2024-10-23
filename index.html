@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Black Friday Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css"><!--Links the html to css-->
+    <script src="https://kit.fontawesome.com/e91dd034a6.js" crossorigin="anonymous"></script> <!--Links the media icons-->
+</head>
+<body>
+    <div class="banner">
+        <!-- Banner Video-->
+        <video autoplay loop muted playsinline class="back-video">
+            <source src="https://www.dropbox.com/scl/fi/vu20tfh7ks666szl7rxno/blackfri-desktop.mp4?rlkey=hrswanl1fn9pjn0n4oxjz1mw8&st=hvgpcpu4&dl=1" type="video/mp4">
+        </video>
+
+            <!-- Banner Video for Mobile -->
+    <video autoplay loop muted playsinline class="mobile-video">
+        <source src="https://www.dropbox.com/scl/fi/um01j4q3ocq4hcjl06wk7/blackfri-mobile-1.mp4?rlkey=77l5yostm7z29o7850m102ign&st=gk8ut45h&dl=1" type="video/mp4">
+    </video>
+</div>
+
+        <!--Nav bar-->
+        <nav>
+            <a href="index.html"><img src="https://www.dropbox.com/scl/fi/ywx792ipx6abtnzombvai/logo.png?rlkey=q412aqdtpketjgucbo4mws1to&st=djg2cb78&raw=1" class="logo"></a>
+            
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="test.html">SUBSCRIBE</a></li>
+                <li><a href="test.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- New Section under the video with form -->
+    <section class="info-section">
+        <h1 class="heading">Join Our Newsletter</h1>
+        <p class="subtext">
+            Subscribe to our newsletter and be the first to unlock exclusive access to our 
+            <b>Biggest Black Friday Sale</b>, plus get early updates on 
+            unbeatable monthly deals and special offers. Don’t miss out on the savings.
+        </p>
+
+        <form name="submit-to-google-sheet"> <!--Subscription Form Names-->
+            <label for="first-name">First Name</label>
+            <input type="name" name="Name" placeholder="Enter Your First Name" required>
+            
+            <label for="email">Contact Email</label>
+            <input type="email" name="Email" placeholder="Enter Your Email Address" required>
+
+            <label for="DOB">Date Of Birth</label>
+            <input type="text" id="DOB" name="DOB" placeholder="DD/MM/YY" required pattern="\d{2}/\d{2}/\d{2}" oninput="this.value = this.value.replace(/[^0-9/]/g, '');">
+
+            <button type="submit">Submit</button>
+
+            <p class="consent-text">
+                By signing up you consent to receive marketing emails from us and can unsubscribe at any time.
+            </p>
+        </form>
+        <span id="msg"></span>
+    </section>
+
+    <!--Footer section that can add links later on-->
+    <div class="footer">
+        <div class="col-1">
+            <h3>USEFUL LINKS</h3>
+            <a href="#">About</a> 
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Shop</a>
+            <a href="#">Blog</a>
+        </div>
+
+        <div class="col-2">
+            <h3>CONTACT</h3>
+            <p>123, XYZ Street, SK4 8NA<br>Monopoly, England</p>
+            
+            <div class="social-icons"> <!--Icon images that can link later on-->
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show'); // Toggle the "show" class
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /*issue to prevent horizontal scrolling */
+}
+
+/* Nav Bar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100; /* Keep nav clearly above everything as that was a issue */
+    background-color: black;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white; /* Adjust color as needed */
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+/* Show the navigation links when the show class is applied */
+nav ul.show {
+    display: flex; /* Ensure it shows as a flex container */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position them absolutely */
+    top: 60px; /* Adjust according to navbar height */
+    right: 0; /* Align to the right */
+    background-color: black; /* Same background as the navbar */
+    width: 100%; /* Full width */
+    padding: 20px 0; /* Increase padding for a larger dropdown */
+    z-index: 99; /* Make sure it's above other content */
+}
+
+/* Styles for menu items */
+nav ul li {
+    list-style: none;
+    margin: 10px 0; /* Increase margin for spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px; /* Increase font size for better visibility */
+    padding: 10px 20px; /* Add padding to menu items */
+    display: block; /* Make the entire area clickable */
+}
+
+/* Optional: Add hover effect for better interaction */
+nav ul li a:hover {
+    background-color: #444; /* Darker background on hover */
+}
+
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Nav Links */
+nav ul {
+
+    flex-direction: row;
+    position: relative;
+    top: 0px;
+    left: 0;
+    background-color: black;
+    width: auto;
+    z-index: 99;
+    margin-left: 20px;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+/* Main Banner */
+
+.banner {
+    position: relative;
+    height: 100vh;
+    padding-top: 60px;
+    margin-bottom: 0
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
+
+/* General styles for both videos */
+.back-video {
+    position: absolute;
+    top: 60px; /* Adjust for navbar height */
+    left: 0;
+    width: 100%;
+    height: calc((100vw / 16) * 9); /* Maintain a 16:9 aspect ratio */
+    object-fit: cover;
+    object-position: top center;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the desktop video */
+.desktop-video {
+    display: block;
+}
+
+/* Styles for the mobile video */
+.mobile-video {
+    display: none; /* Show mobile video on mobile */
+}
+/* Info Section (New Section Under Video) */
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.info-section .heading {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-section .subtext {
+    font-size: 20px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/*Subscribe form*/
+
+form {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+form input, form button {
+    display: block;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+    text-align: left; /* Aligns text to the left kept causing me issues*/
+    width: 78%;
+}
+
+form input {
+    border: 2px solid black;
+    outline: none;
+    padding: 10px 20px;
+    height: 70px;
+    width: 400px;
+    font-size: 16px;
+    text-align: left;
+}
+
+form button {
+    background-color: #b2bec3;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 400px;
+    cursor: pointer;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #95a5a6;
+}
+
+span{ /*for the text under the button*/
+    color: black;
+    margin-top: 10px;
+    display: block;
+}
+
+.consent-text {
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
+    text-align: center;
+}
+    
+.footer {
+    margin-top: 80px;
+    width: 100%;
+    padding: 20px 15%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer div {
+    text-align: left;
+    width: 45%;
+}
+
+.footer a { /*Link texts*/
+    display: block;
+    margin-bottom: 8px;
+    color: #efefef;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    line-height: 1.4;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 10px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+/* Hamburger menu */
+@media (max-width: 768px) {
+    /* Hide the navigation links by default on mobile */
+    nav ul {
+        display: none; /* Hide nav links */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position them absolutely */
+        top: 60px; /* Adjust according to navbar height */
+        right: 0; /* Align to the right */
+        background-color: black; /* Same background as the navbar */
+        width: 100%; /* Full width */
+        padding: 0; /* Remove padding */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
+    }
+}
+
+/* Show the navigation links when the show class is applied */
+nav ul.show {
+    display: flex; /* Show the links */
+}
+
+/* Adjust Form for Mobile */
+@media only screen and (max-width: 600px) {
+    form input, form button {
+        width: 90%;
+    }
+    form label {
+        width: 100%;
+    }
+}
+
+/* Main Banner and Content */
+@media only screen and (max-width: 600px) {
+    .banner {
+        position: relative;
+        min-height: 100vh;
+        padding-top: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+
+    /* Adjusting content to remove gaps */
+    .content {
+        position: relative;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* Media query for mobile screens (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+    .desktop-video {
+        display: none; /* Hide desktop video on mobile */
+    }
+
+    .mobile-video {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        object-fit: cover;
+        object-position: center;
+        background-color: black;
+    }
+}
+
+/* Adjust Margin/Padding between Video and Info Section */
+@media only screen and (max-width: 600px) {
+    .info-section {
+        padding: 10px;
+        margin-top: 0px;
+        min-height: 100vh;
+    }
+
+    .banner {
+        margin-bottom: 0;
+    }
+}
+
+/* Font Sizes and Spacing */
+@media only screen and (max-width: 600px) {
+    .info-section .heading {
+        font-size: 32px;
+    }
+
+    .info-section .subtext {
+        font-size: 16px;
+        margin: 0 auto;
+        line-height: 1.4;
+    }
+}
+
+/* Footer and Social Icons */
+@media only screen and (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-2 {
+        margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; 
+            padding-top: 10px;
+            flex-wrap: wrap;
+        }
+    
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    
+        .social-icons i {
+            font-size: 20px;
+            margin: 5px;
+            display: inline-block;
+        }
+    }
